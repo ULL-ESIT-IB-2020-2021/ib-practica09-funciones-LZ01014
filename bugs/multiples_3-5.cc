@@ -26,7 +26,7 @@ bool IsMultiple3Or5(int number) {
     return true;
   if (number % 5 == 0)
     return true;
-	return true;
+	return false;
 }
 
 int main () {
@@ -35,7 +35,7 @@ int main () {
   int sum{0};
   for (int i = 3; i < kLimit; ++i) {
     if (IsMultiple3Or5(i)) {
-      std::cout << i << std::endl;
+      std::cout << i << " ";
       sum += i;
     }
   }

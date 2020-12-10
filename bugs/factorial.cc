@@ -16,19 +16,18 @@
 
 // Prints a Foreword before the complete execution of the program
 void Foreword() {
-  std::cout << "Este programa imprime el factorial de los N primeros \
-                números para un N introducido por el usuario" << std::endl << std::endl;
+  std::cout << "Este programa imprime el factorial de los N primeros números para un N introducido por el usuario" << std::endl << std::endl;
 }
 
 // Returns the factorial of the argument
-unsigned long Factorial(unsigned number) {
+int long Factorial(unsigned number) {
   switch (number) {
     case 0:
     case 1:
       return 1;
     default:
-      unsigned long factorial;
-      for (unsigned i = 1; i <= number; ++i) {
+      int factorial = 1;
+      for (int i = 1; i <= number; ++i) {
         factorial *= i;
       }
       return factorial;
@@ -40,7 +39,7 @@ int main () {
   std::cout << "Introduzca el número de factoriales a calcular: ";
   unsigned limit;
   std::cin >> limit;
-  for (unsigned i = 1; i <= limit; ++i) {
+  for (int i = 1; i <= limit; ++i) {
     std::cout << i << "! = " << Factorial(i) << std::endl; 
   }
   return 0;

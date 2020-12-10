@@ -40,11 +40,12 @@ int main () {
       before_last = 0;
       last = 1;
       std::cout << before_last << kSpace;
-      std::cout << last << " ";
+      std::cout << last << kSpace;
       for (int i = 0; i < (num_terms - 2); ++i) {
         next = last + before_last;
         std::cout << next << kSpace;
         before_last = last;
+        last = next;
       }
       break;
   }
